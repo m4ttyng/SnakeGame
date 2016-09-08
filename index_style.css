@@ -1,0 +1,120 @@
+html{
+  background-color: black;
+}
+body{
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  position: absolute;
+  margin: 0 auto;
+  margin: 5% 20% 10% 20%;
+  width: 60%;
+  height: 600px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 15px grey;
+  background-color: rgba(125, 167, 87, 1);
+
+}
+#snakeGame{
+  position: relative;
+  background-color: rgba(159, 197, 121, 1);
+  color: rgba(41, 43, 21, 1);
+  font-family: 'Press Start 2P', cursive;
+  width: auto;
+  text-align: center;
+  margin-left: 17%;
+  margin-right: 17%;
+  margin-top: 50px;
+  padding-top: 10px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-size: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.snake{
+  position: relative;
+  width: 50%;
+  height: 30%;
+  border: 5px solid black;
+  margin: 0 auto;
+}
+#startButton{
+  background-color: rgba(159, 197, 121, 1);
+  color: rgba(41, 43, 21, 1);
+  font-family: 'Press Start 2P', cursive;
+  width: auto;
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-size: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+#startButton:hover{
+  background-color: rgba(41, 43, 21, 1);
+  color: rgba(159, 197, 121, 1);
+}
+#highScore{
+  background-color: rgba(159, 197, 121, 1);
+  color: rgba(41, 43, 21, 1);
+  font-family: 'Press Start 2P', cursive;
+  width: auto;
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-size: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 3%;
+}
+#highScore:hover{
+  background-color: rgba(41, 43, 21, 1);
+  color: rgba(159, 197, 121, 1);
+}
+.credits{
+  margin-top: 3%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  opacity: 0.6;
+}
+.movingSnake > div{
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: black;
+  animation: movingsnake 2s ease-in;
+}
+@keyframes movingsnake{
+  0%{
+    left: 0;
+    padding: 0;
+  }
+  50%{
+    margin-left: 7px;
+  }
+  100%{
+    margin-left: 14px;
+  }
+}
