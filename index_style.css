@@ -42,7 +42,7 @@ a{
   position: relative;
   width: 50%;
   height: 30%;
-  border: 5px solid black;
+  border: 1px solid black;
   margin: 0% 0% 0% 25%;
   margin-top: -5%;
 }
@@ -143,4 +143,29 @@ a{
   text-align: center;
   text-transform: uppercase;
   opacity: 0;
+}
+@media only screen and (max-width: 1000px) {
+  #snakeGame{
+    font-size: 24px;
+  }
+  #gameCanvas{
+    margin-top: 3%;
+  }
+  #startButton{
+    margin-top: -2%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #snakeGame{
+    font-size: 15px;
+  }
+  #startButton{
+    margin-top: 35%;
+  }
+  #startButton, #highScore{
+    font-size: 20px;
+  }
+  #gameCanvas{
+    margin-top: 20%;
+  }
 }
