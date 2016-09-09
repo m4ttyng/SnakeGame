@@ -44,6 +44,7 @@ a{
   height: 30%;
   border: 5px solid black;
   margin: 0 auto;
+  margin-top: -5%;
 }
 #startButton{
   background-color: rgba(159, 197, 121, 1);
@@ -63,6 +64,11 @@ a{
   border: 1px solid black;
   margin: 0 auto;
   margin-top: 1%;
+  transition: 100ms ease-in;
+}
+#startButton:target{
+  margin-top: 100px;
+  animation: movedown 1s ease-in-out forwards;
 }
 #startButton:hover{
   background-color: rgba(41, 43, 21, 1);
@@ -86,6 +92,15 @@ a{
   border: 1px solid black;
   margin: 0 auto;
   margin-top: 3%;
+  transition: 100ms ease-in;
+}
+@keyframes movedown{
+  0%{
+
+  }
+  100%{
+    margin-top: 100%;
+  }
 }
 #highScore:hover{
   background-color: rgba(41, 43, 21, 1);
@@ -105,6 +120,7 @@ a{
   height: 7px;
   background-color: black;
   animation: movingsnake 2s ease-in;
+  animation-timing-function: steps(1, end);
 }
 @keyframes movingsnake{
   0%{
@@ -117,4 +133,14 @@ a{
   100%{
     margin-left: 14px;
   }
+}
+.score{
+  position: relative;
+  font-family: 'Press Start 2P', cursive;
+  color: rgba(41, 43, 21, 1);
+  font-size: 30px;
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
 }

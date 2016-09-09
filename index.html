@@ -1,20 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
 
 <head>
     <meta name="viewprt" content="width-device-width, initial-scale=1">
      <meta charset="UTF-8">
      <title>Snake</title>
      <meta name="SnakeGame" content="First Attept at Creating the Classic Snake Game">
-     <link rel="stylesheet" href="index_style.css?version=1">
+     <link rel="stylesheet" href="style/index_style.css?version=1">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
      <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+     <script type="text/javascript">
+       $(document).ready(function(){
+         $('#startButton').click(function() {
+           $('#startButton').animate({margin: '600px 0px 0px 0px'});
+           $('#snakeGame').animate({'font-size': '24px'});
+           $('.snake').animate({width: '90%', height: '50%', margin: '0% 0px 0px 4%'});
+           $('.score').animate({'opacity': '1'});
+         });
+
+       });
+     </script>
      <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
  </head>
 
  <body>
-  <div id="menuDiv" class="container">
+  <div class="container">
     <p id="snakeGame">Classic Snake</p>
     <div class="snake">
       <div class="movingSnake">
@@ -25,21 +37,11 @@
         <div class="snake5"></div>
       </div>
     </div>
+    <div class="score">score: 0</div>
     <a href="#"><p id="startButton">start</p></a>
     <a href="#"><p id="highScore">high score</p></a>
-    <div class="credits">designed and developed by Eduard Draghiciu and Matt Young</div>
+    <div class="credits">deisgned and developed by Eduard Draghiciu and Matt Young</div>
   </div>
-  
-  <div id="gameDiv" class="container">
-     <canvas id="gameCanvas"></canvas>
-  </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script type="text/javascript" src="engine.js"></script>
-  
  </body>
 
  </html>
-
-
-
