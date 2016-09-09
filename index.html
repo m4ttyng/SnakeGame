@@ -6,15 +6,16 @@
      <meta charset="UTF-8">
      <title>Snake</title>
      <meta name="SnakeGame" content="First Attept at Creating the Classic Snake Game">
-     <link rel="stylesheet" href="style/index_style.css?version=1">
+     <link rel="stylesheet" href="index_style.css?version=1">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
      <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+     <script type="text/javascript" src="engine.js"></script>
      <script type="text/javascript">
        $(document).ready(function(){
          $('#startButton').click(function() {
            $('#startButton').animate({margin: '600px 0px 0px 0px'});
            $('#snakeGame').animate({'font-size': '24px'});
-           $('.snake').animate({width: '90%', height: '50%', margin: '0% 0px 0px 4%'});
+           $('#gameCanvas').animate({width: '90%', height: '50%', margin: '0% 0px 0px 4%'});
            $('.score').animate({'opacity': '1'});
          });
 
@@ -28,7 +29,7 @@
  <body>
   <div class="container">
     <p id="snakeGame">Classic Snake</p>
-    <div class="snake">
+    <canvas id="gameCanvas">
       <div class="movingSnake">
         <div class="snake1"></div>
         <div class="snake2"></div>
@@ -36,7 +37,7 @@
         <div class="snake4"></div>
         <div class="snake5"></div>
       </div>
-    </div>
+    </canvas>
     <div class="score">score: 0</div>
     <a href="#"><p id="startButton">start</p></a>
     <a href="#"><p id="highScore">high score</p></a>
